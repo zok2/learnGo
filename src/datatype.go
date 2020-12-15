@@ -23,7 +23,7 @@ func main()  {
 	var name = "星光"
 	var detailed = `asd
 asd
-`
+` 
 	fmt.Println(name)
 	fmt.Println(detailed)
 	fmt.Println(len(name))
@@ -38,9 +38,7 @@ asd
 	fmt.Println(strings.Contains(detailed,"a"))
 	fmt.Println(strings.HasPrefix(detailed,"a"))
 	fmt.Println(strings.HasSuffix(detailed,"\n"))
-
 	fmt.Println(strings.Index(detailed,"s"))
 	fmt.Println(strings.LastIndex(detailed,"s"))
-
 	fmt.Println(strings.Join(strings.Split("a,b,c",","),"-"))
 }
