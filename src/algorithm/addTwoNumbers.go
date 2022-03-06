@@ -56,9 +56,9 @@ func main()  {
 
 		},
 	}
-	sum := reverseList(addTwoNumbers(l1,l2))
+	sum := addTwoNumbers(l1,l2)
 	for  {
-		fmt.Print(sum.Val)
+		fmt.Println(sum.Val)
 		if sum.Next != nil {
 			sum = sum.Next
 		}else {
