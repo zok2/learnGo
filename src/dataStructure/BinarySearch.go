@@ -1,9 +1,11 @@
 package main
 
+import "fmt"
+
 func binarySearch(nums []int, target int) int {
 	low, high := 0, len(nums)-1
 	for  low<=high{
-		mid := (low+high)/2+low
+		mid := (low+high)/2
 		num := nums[mid]
 		if num == target {
 			return mid
@@ -19,6 +21,6 @@ func binarySearch(nums []int, target int) int {
 func main() {
 	nums := []int{-1, 0, 3, 5, 9, 12}
 	target := 9
-	binarySearch(nums, target)
+	fmt.Println(binarySearch(nums, target))
 }
 
