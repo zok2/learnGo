@@ -1,5 +1,6 @@
 package main
 import (
+	"../tool"
 	"fmt"
 )
 //滑动窗口  通过位移右指针验证，将字符value ++   不等0 跳出循环 记录最大值，位移左指针，删除刚才重复出现的值。
@@ -21,17 +22,11 @@ func lengthOfLongestSubstring(s string) int {
 		}
 
 		// 第 i 到 rk 个字符是一个极长的无重复字符子串
-		ans = max(ans, rk-i+1)
+		ans = tool.Max(ans, rk-i+1)
 	}
 	return ans
 }
 
-func max(x, y int) int {
-	if x < y {
-		return y
-	}
-	return x
-}
 
 func main() {
 	str := "pwwkew"
