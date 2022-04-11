@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 )
-
+// 通项公式
 func climbStairs1(n int) int {
 	sqrt5 := math.Sqrt(5)
 	pow1 := math.Pow((1+sqrt5)/2, float64(n+1))
@@ -12,7 +12,7 @@ func climbStairs1(n int) int {
 	return int(math.Round((pow1 - pow2) / sqrt5))
 }
 
-// 通项公式
+
 func climbStairs2(n int) int {
 	p, q, r := 0, 0, 1
 	for i := 1; i <= n; i++ {
