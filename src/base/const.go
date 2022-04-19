@@ -1,7 +1,8 @@
 package main
 
-import  "fmt"
+import "fmt"
 const pi = 3.1415
+
 //批量生成常量 is_admin is_delete 默认user_status
 
 const (
