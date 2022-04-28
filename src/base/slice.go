@@ -6,15 +6,21 @@ import "fmt"
  *slice  学习
  */
 func main() {
+	//声明city 是一个切片， 并且初始化， 默认值是 "北京", "上海", "广州" 长度是len 3
 	city := []string{"北京", "上海", "广州"}
+	// 追加元素
 	city = append(city,"深圳")
-
+	fmt.Println(city)
 	city = append(city[1:],city[3:]...)
 	fmt.Println(city)
 	fmt.Printf("city : %T\n", city)
 	fmt.Printf("city len: %d\n", len(city))
 	fmt.Printf("city cap: %d\n",cap(city))
 	fmt.Printf("city addr: %p\n",city)
+
+	var  test []int = make([]int,3)
+	fmt.Printf("test : %v\n", test)
+	// 声明一个code 是一个切片，开辟3个空间，默认值0 ，容量100 常用的方式
 	code := make([]int,3,100)
 	fmt.Printf("code : %T\n", code)
 	fmt.Printf("code len: %d\n", len(code))
