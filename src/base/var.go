@@ -18,6 +18,7 @@ func main()  {
 	fmt.Printf("b = %d type of b = %T\n",b,b)
 	fmt.Printf("c = %s type of c = %T\n",c,c)
 
+
 	//声明一个变量，省去数据类型
 	var d = 1
 	var e = "abcd"

@@ -14,8 +14,15 @@ func climbStairs1(n int) int {
 
 
 func climbStairs2(n int) int {
-	p, q, r := 0, 0, 1
-	for i := 1; i <= n; i++ {
+	p, q, r := 0, 2, 1
+	for i := 4; i <= n; i++ {
+		if n==3 {
+			return 2
+		}
+		if n<3 {
+			return 1
+		}
+
 		p = q
 		q = r
 		r = p + q
@@ -24,8 +31,6 @@ func climbStairs2(n int) int {
 }
 
 func main()  {
-	res1 := climbStairs1(100)
-	res2 := climbStairs2(100)
-	fmt.Println(res1)
+	res2 := climbStairs2(6)
 	fmt.Println(res2)
 }
