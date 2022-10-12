@@ -5,7 +5,7 @@ import "fmt"
 func end3()  {
 	fmt.Println("main :: end3")
 }
-// defer 与 return  的先后顺序(先return 在defer)
+// defer 与 return  的先后顺序(先return 在defer) ,逆序执行
 func deferFunc()  {
 	fmt.Println("defer Func")
 }
