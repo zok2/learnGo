@@ -6,6 +6,14 @@ import "fmt"
  *slice  学习
  */
 func main() {
+
+	var slice1 [][]int
+	slice1 = [][]int{{1,2,3},{4,5,6},{7,8,9}}
+	fmt.Printf("slice1 : %T\n", slice1)
+	slice2 := []int{1,2,3}
+	slice1 = append(slice1,slice2)
+	fmt.Printf("len = %d slice = %v\n",len(slice1),slice1)
+
 	//声明city 是一个切片， 并且初始化， 默认值是 "北京", "上海", "广州" 长度是len 3
 	city := []string{"北京", "上海", "广州"}
 	// 追加元素
@@ -20,14 +28,49 @@ func main() {
 
 	var  test []int = make([]int,3)
 	fmt.Printf("test : %v\n", test)
+	fmt.Printf("test len: %d\n", len(test))
+	fmt.Printf("test cap: %d\n",cap(test))
+	fmt.Printf("test addr: %p\n",test)
+	test = append(test,1,1,2)
+	fmt.Printf("test : %v\n", test)
+	fmt.Printf("test len: %d\n", len(test))
+	fmt.Printf("test cap: %d\n",cap(test))
+	fmt.Printf("test addr: %p\n",test)
+	test = append(test,1,1,2)
+	fmt.Printf("test : %v\n", test)
+	fmt.Printf("test len: %d\n", len(test))
+	fmt.Printf("test cap: %d\n",cap(test))
+	fmt.Printf("test addr: %p\n",test)
 	// 声明一个code 是一个切片，开辟3个空间，默认值0 ，容量100 常用的方式
-	code := make([]int,3,100)
+	fmt.Printf("************************")
+	code := make([]int,3,6)
+	fmt.Printf("code : %v\n", code)
+	fmt.Printf("code : %T\n", code)
+	fmt.Printf("code len: %d\n", len(code))
+	fmt.Printf("code cap: %d\n",cap(code))
+	fmt.Printf("code addr: %p\n",code)
+	code = append(code,1,2,3,4)
+	fmt.Printf("test : %v\n", code)
 	fmt.Printf("code : %T\n", code)
 	fmt.Printf("code len: %d\n", len(code))
 	fmt.Printf("code cap: %d\n",cap(code))
 	fmt.Printf("code addr: %p\n",code)
 
 
+	fmt.Printf("************************")
+	slice := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	s1 := slice[2:5]
+	s2 := s1[2:6:7]
+	s3 := s1[2:5]
+	fmt.Println(s3)
+	s2 = append(s2, 100)
+	s2 = append(s2, 200)
+
+	s1[2] = 20
+
+	fmt.Println(s1)
+	fmt.Println(s2)
+	fmt.Println(slice)
 	/*
 	切片基于数组 ，切片引用类型
 	初始化定义并赋值city
