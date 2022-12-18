@@ -4,12 +4,17 @@ import "fmt"
 
 func main()  {
 	// 固定长度的数组，默认值 0，值类型
-	var city [3]string= [3]string{"北京","上海","广州"}
+	var city = [3]string{"北京","上海","广州"}
+	var citys = [3][3]string{{"北京","上海","广州"},{"北京","上海","广州"},{"北京","上海","广州"}}
 	fmt.Println(city)
 	fmt.Println(len(city))
 	//长度不同类型不同
 	fmt.Printf("city type = %T\n",city)
 
+	fmt.Println(citys)
+	fmt.Println(len(citys))
+
+	fmt.Printf("citys type = %T\n",city)
 
 	r:=[...] int{10:-1}
 	fmt.Printf("r type = %T\n",r)

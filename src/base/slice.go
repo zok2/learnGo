@@ -8,7 +8,7 @@ import "fmt"
 func main() {
 
 	var slice1 [][]int
-	slice1 = [][]int{{1,2,3},{4,5,6},{7,8,9}}
+	slice1 = [][]int{{1,2,3,5},{4,5,6},{7,8,9}}
 	fmt.Printf("slice1 : %T\n", slice1)
 	slice2 := []int{1,2,3}
 	slice1 = append(slice1,slice2)
