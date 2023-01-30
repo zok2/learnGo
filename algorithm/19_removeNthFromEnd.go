@@ -1,7 +1,7 @@
 package main
 
 import (
-	"../algorithm/internal"
+	"./internal"
 )
 
 /*
