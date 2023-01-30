@@ -1,9 +1,7 @@
 package main
 
 import (
-	//  匿名导入  _ "../tool"
-	// mytool 别名  "../tool"
-	// . 不建议使用 方法重名会出现问题  "../tool"
+	"../tool"
 	"fmt"
 )
 func main()  {

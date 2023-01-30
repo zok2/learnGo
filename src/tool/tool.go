@@ -23,3 +23,6 @@ func Abs(x int) int {
 func init()  {
 	fmt.Println("初始化。。。")
 }
+func init()  {
+	fmt.Println("初始化2。。。")
+}
