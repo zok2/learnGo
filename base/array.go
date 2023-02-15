@@ -44,5 +44,9 @@ func main() {
 	} else {
 		fmt.Println("city  != citys ", false)
 	}
+	//q := [3]int{1, 2, 3}
+	//q = [4]int{1, 2, 3, 4} // compile error: cannot assign [4]int to [3]int
+	//p := [4]int{1, 2, 3, 4}
+	// fmt.Println(q == p) //invalid operation: q == p (mismatched types [3]int and [4]int)
 	//数组没有删除操作
 }
