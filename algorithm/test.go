@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 func minDifference(nums []int, queries [][]int) []int {
 	var min func(a, b int) int
@@ -37,4 +40,22 @@ func minDifference(nums []int, queries [][]int) []int {
 		res = append(res, best)
 	}
 	return res
+}
+
+func test(coins []int, amount int) int {
+	dp := make([]int, amount+1)
+	dp[0] = 1
+	for _, coin := range coins {
+		for i := coin; i <= amount; i++ {
+			dp[i] += dp[i-coin]
+
+		}
+	}
+	return dp[amount]
+}
+func main() {
+	coins := []int{1, 2, 5}
+	amount := 12
+	c := test(coins, amount)
+	fmt.Printf("amount:%d , count : %d", amount, c)
 }
